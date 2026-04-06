@@ -1,47 +1,92 @@
-*{
-  font-family: Arial;
-}
-.container{
-  display: flex
-  flex-direction:column;
-  height:100vh
-  }
-    
-.header{
-  flex:15%
-  background-color: lightgray;
-
-}
- .menu{
-   flex:5%
-     backgroundcolor: gray:
-}
-.content{
-  flex: 70%
-    background-color; white;
-}
-.footer{
-  flex:10%
-    background-color: lightgray;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;           /* Chiều cao full màn hình */
+  min-height: 100vh;
+}
 
+/* Header */
+.header {
+  flex: 15%;               /* hoặc flex: 0 0 15% */
+  background: linear-gradient(to right, #4a90e2, #357abd); /* Màu xanh dương đẹp */
+  color: white;
+  padding: 20px 30px;      /* Tăng khoảng trống bên trong */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bóng nhẹ */
+}
 
+/* Menu */
+.menu {
+  flex: 5%;                /* hoặc flex: 0 0 5% */
+  background-color: #2c3e50; /* Màu xám xanh đậm, hiện đại */
+  color: white;
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;               /* Khoảng cách giữa các mục trong menu */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
-.fl{ 
-  color: red;
-  margin-top: 18pt; 
-  margin-bottom: 12pt; 
-  font-size: 20px; 
-  font-weight: bold; 
-  font-family: Arial; 
-} 
-.f2 
-{ 
-  color: black; 
-  margin-top: 6pt; 
-  margin-bottom: 15pt; 
-  font-size: 15px; 
-  font-style: normal; 
-  font-family: Arial; 
+/* Nội dung chính */
+.content {
+  flex: 70%;               /* Phần lớn nhất */
+  background-color: #f8f9fa; /* Màu trắng ngà nhẹ, dễ nhìn */
+  padding: 40px 50px;      /* Tăng khoảng trống bên trong rất nhiều */
+  overflow-y: auto;        /* Nếu nội dung dài sẽ có thanh cuộn */
+}
+
+/* Footer */
+.footer {
+  flex: 10%;
+  background-color: #2c3e50; /* Đồng bộ màu với menu */
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style cho tiêu đề và nội dung (các class bạn đang dùng) */
+.fl {
+  color: #e74c3c;                    /* Màu đỏ đẹp hơn */
+  margin-top: 10px;
+  margin-bottom: 18px;
+  font-size: 28px;                   /* To hơn một chút */
+  font-weight: bold;
+  letter-spacing: 0.5px;             /* Khoảng cách chữ đẹp */
+}
+
+.f2 {
+  color: #2c3e50;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  line-height: 1.6;                  /* Dễ đọc hơn */
+  max-width: 800px;                  /* Không để chữ quá dài */
+}
+
+/* Một số cải thiện thêm (tùy chọn) */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
